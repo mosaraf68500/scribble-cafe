@@ -2,8 +2,8 @@ import React from "react";
 import { FaRegBookmark } from "react-icons/fa";
 
 
-const Blog = ({blog,handleBookmarked}) => {
-    // console.log(handleBookmarked)
+const Blog = ({blog,handleBookmarked, handleReadingTime}) => {
+    // console.log(handleReadingTime)
     const { title, cover,author_img,author,hashtags}=blog;
   return (
     <div>
@@ -30,7 +30,7 @@ const Blog = ({blog,handleBookmarked}) => {
 </div>
 
     <div className="card-actions">
-      <button className="btn btn-primary">reading as mark</button>
+      <button onClick={()=>handleReadingTime(blog.reading_time)} className="btn btn-primary">reading as mark</button>
     </div>
   </div>
 </div>
