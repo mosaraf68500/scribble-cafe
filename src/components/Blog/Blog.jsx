@@ -2,8 +2,9 @@ import React from "react";
 import { FaRegBookmark } from "react-icons/fa";
 
 
-const Blog = ({blog}) => {
-    const { title, cover,author_img,author,posted_date,reading_time,hashtags}=blog;
+const Blog = ({blog,handleBookmarked}) => {
+    // console.log(handleBookmarked)
+    const { title, cover,author_img,author,hashtags}=blog;
   return (
     <div>
       <div className="card bg-base-100 w-96 shadow-sm">
@@ -17,7 +18,7 @@ const Blog = ({blog}) => {
   <div className="flex justify-around pt-2 items-center">
     <h3>{author} </h3>
     <img className="w-10" src={author_img} alt="" />
-    <FaRegBookmark size={30} />
+    <button onClick={()=> handleBookmarked(blog)}><FaRegBookmark size={30} /></button>
 
   </div>
   <div className="card-body items-center text-center">
