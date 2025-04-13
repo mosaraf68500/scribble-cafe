@@ -16,10 +16,20 @@ function App() {
   }
   // console.log(bookmark)
 
-  const handleReadingTime=(blog)=>{
+  const handleReadingTime=(time,id)=>{
 
-    const newReadingTime=readingTime+blog;
+    const newReadingTime=readingTime+time;
     setReadingTime(newReadingTime);
+    removeBookMark(id);
+    // console.log(id)
+  }
+
+  const removeBookMark=(id)=>{
+  // const [bookmark ,setBookmark]=useState([]);
+  const remaingBookMark= bookmark.filter(book=>book.id!==id);
+  setBookmark(remaingBookMark);
+    
+
   }
 
   return (

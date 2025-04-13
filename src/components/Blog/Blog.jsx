@@ -30,7 +30,7 @@ const Blog = ({blog,handleBookmarked, handleReadingTime}) => {
 </div>
 
     <div className="card-actions">
-      <button onClick={()=>handleReadingTime(blog.reading_time)} className="btn btn-primary">reading as mark</button>
+      <button onClick={()=>handleReadingTime(blog.reading_time,blog.id)} className="btn btn-primary">reading as mark</button>
     </div>
   </div>
 </div>
